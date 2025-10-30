@@ -1,0 +1,8 @@
+{
+  "train_rows": 23972,
+  "test_rows": 5993,
+  "n_features": 26,
+  "target_mean_train": 0.22125813449023862,
+  "target_mean_test": 0.22125813449023862,
+  "utilization1_p95_test": 1.011644
+}

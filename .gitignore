@@ -1,0 +1,9 @@
+/.venv/
+/mlruns/
+/__pycache__/
+/*.egg-info
+/.dvc/cache/
+/artifacts/
+/models/*.pkl
+.ipynb_checkpoints/
+/data/processed/*.csv
