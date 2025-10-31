@@ -36,7 +36,7 @@ stages:
           cache: false
 
   monitor:
-    cmd: python src/monitor/psi.py --train data/processed/train.csv --new data/processed/test.csv --out artifacts/psi.json
+    cmd: python src/monitor/psi.py --train data/processed/train.csv --stream data/processed/test.csv --out artifacts/psi.json
     deps:
       - src/monitor/psi.py
       - data/processed/train.csv

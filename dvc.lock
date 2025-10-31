@@ -10,8 +10,8 @@ stages:
       size: 2862995
     - path: src/data/make_dataset.py
       hash: md5
-      md5: 3f40b8a56c33dec79fe3353f4de46582
-      size: 2029
+      md5: ee7f0704dd2e57a8e1541b5ffef451be
+      size: 2222
     outs:
     - path: data/processed/summary_base.json
       hash: md5
@@ -38,8 +38,8 @@ stages:
       size: 2831503
     - path: src/features/build_features.py
       hash: md5
-      md5: 4e5f08457dee75f60122ac8c070d026b
-      size: 1432
+      md5: 54be16bb13e156e715f4924968f79e72
+      size: 1472
     outs:
     - path: data/processed/summary.json
       hash: md5
@@ -68,18 +68,39 @@ stages:
       size: 3578428
     - path: src/models/train.py
       hash: md5
-      md5: 0bda6956db5e830c119a0207725e382c
-      size: 3213
+      md5: 6932aa1386842497930dd1aad9b0d3e0
+      size: 3882
     outs:
     - path: artifacts/roc.png
       hash: md5
-      md5: ca77981e9cb58fc5fc08667b3a273589
-      size: 24985
+      md5: c6967d824c066a7a440829661eb0860f
+      size: 24977
     - path: metrics.json
       hash: md5
-      md5: 520106fd309ac6ec7f4cdf18c8e86c91
-      size: 171
+      md5: a00c89438dc5154062d6aeeef8617025
+      size: 170
     - path: models/credit_default_model.pkl
       hash: md5
-      md5: de46fa3c85a1d198a4521a4fe40cfdf1
+      md5: 355d56d8187cf51f63b8feb59307f254
       size: 316125
+  monitor:
+    cmd: python src/monitor/psi.py --train data/processed/train.csv --stream 
+      data/processed/test.csv --out artifacts/psi.json
+    deps:
+    - path: data/processed/test.csv
+      hash: md5
+      md5: c609d877b828e6fa4d444b169976c016
+      size: 895644
+    - path: data/processed/train.csv
+      hash: md5
+      md5: 4159b0a9f5e3fd92cdf83bd80a1f50ee
+      size: 3578428
+    - path: src/monitor/psi.py
+      hash: md5
+      md5: 9d582854120abd442d3360c457bf6a06
+      size: 4539
+    outs:
+    - path: artifacts/psi.json
+      hash: md5
+      md5: f75d006fc32d310c1f6eb1728b627f96
+      size: 79
