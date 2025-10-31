@@ -236,23 +236,4 @@ GitHub Actions:
 
 ---
 
-## Лицензия
-
-MIT
-
-```
-
----
-
-## Что уже проверено и готово
-
-- ✅ DVC стадии `prepare → features → train → monitor`
-- ✅ MLflow трекинг + логирование артефактов и метрик
-- ✅ RandomizedSearchCV для LogReg/GBDT + сохранение лучшей модели
-- ✅ FastAPI `/health`, `/predict` (+ Swagger UI)
-- ✅ Dockerfile и локальный run с монтированием модели
-- ✅ PSI-мониторинг (отчёт в `artifacts/psi.json`)
-- ✅ CI (lint/test/dvc) и workflow на Docker build по тегам
-- ✅ Скриншоты в `reports/img/` — прикреплены и учтены в README
-
 ```
