@@ -25,28 +25,9 @@
 ## Структура репо
 
 ```
-
-.
-├── app/                      # FastAPI сервис (/health, /predict)
-├── data/
-│   ├── raw/                  # исходные данные
-│   └── processed/            # train/test после препроцесса
-├── models/                   # сериализованные модели
-├── src/
-│   ├── data/                 # prepare, quality_report
-│   ├── features/             # feature engineering
-│   ├── models/               # train, search (RandomizedSearchCV)
-│   └── monitor/psi.py        # PSI-анализ
-├── artifacts/                # отчёты PSI, метрики и т.п.
-├── reports/img/              # скриншоты
-├── mlruns/                   # трекинг MLflow (локально)
-├── dvc.yaml / dvc.lock       # описание DVC-пайплайна
-├── requirements.txt
-├── Dockerfile
-├── Makefile
-└── .github/workflows/
-├── ci.yml                # lint + tests + dvc repro
-└── ci-docker.yml         # docker build & push on tag
+<p align="center">
+  <img src="reports/img/prjct.png" width="720"/>
+</p>
 
 ````
 
