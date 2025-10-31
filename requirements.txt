@@ -6,3 +6,9 @@ matplotlib
 joblib
 pytest
 dvc
+fastapi
+uvicorn[standard]
+joblib
+pandas
+scikit-learn
+
